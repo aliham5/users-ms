@@ -11,6 +11,7 @@ export default function makeInputObjectFactory({ md5, sanitize }) {
       modified = Date.now()
     } = params;
 
+    console.log(params)
     return Object.freeze({
       username: () => checkUsername({ username, errorMsgs }),
       password: () => checkPassword({ password, errorMsgs }),
