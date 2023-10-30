@@ -9,7 +9,7 @@ export default function createServer({
     app.use(cors());
     app.use(compression());
     app.use(json());
-    app.use(urlencoded({ extended: true }))
+    // app.use(urlencoded({ extended: true }))
 
     app.use((req, res, next) => {
       logger.info(`[EXPRESS] Connection received: ${req.ip}:${req.path}:${req.method}`);
